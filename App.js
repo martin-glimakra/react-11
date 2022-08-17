@@ -7,15 +7,18 @@ function App() {
   let dataFrånApi = [
     {
       namn: 'Lars',
-      tid: 14
+      tid: 14,
+      ledig: true
     },
     {
       namn: 'Tomas',
-      tid: 15
+      tid: 15,
+      ledig: false
     },
     {
       namn: 'Patrik',
-      tid: 17
+      tid: 17,
+      ledig: false
     }
   ]
 
@@ -29,9 +32,9 @@ function App() {
       {/* <Frisör namn={dataFrånApi[0].namn} tid={dataFrånApi[0].tid} />
       <Frisör namn={dataFrånApi[1].namn} tid={dataFrånApi[1].tid} /> */}
 
-      {dataFrånApi.map(frisör => <Frisör namn={frisör.namn} tid={frisör.tid}/>)}
+      {dataFrånApi.map(frisör => <Frisör ledig={frisör.ledig} namn={frisör.namn} tid={frisör.tid}/>)}
 
-      {dataFrånApi.map(variabelnamn => <div>en vanlig div {variabelnamn.tid}</div>)}
+      {/* {dataFrånApi.map(variabelnamn => <div>en vanlig div {variabelnamn.tid}</div>)} */}
       
     </div>
   );
